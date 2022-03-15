@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  background-color: #0A1929;
+  color: #FFF;
+  font-family: 'Roboto';
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
+}
+
+button .login {
+  padding: 20px 40px;
+  border-radius: 90px;
+  background-color: #E6B980;
+  color: #0A1929;
+  font-size: 18px;
+  text-decoration: none;
+  cursor: pointer;
+}
