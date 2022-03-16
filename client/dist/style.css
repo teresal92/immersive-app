@@ -1,21 +1,30 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   background-color: #0A1929;
   color: #FFF;
-  font-family: 'Roboto';
+  font-family: 'Roboto', 'sans';
+}
+
+.app-container {
+  height: 100vh;
 }
 
 .login {
+  height: 80vh;
+  width: 50%;
   display: flex;
+  margin: 0 auto;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  height: 100vh;
-
+  align-items: center;
+  text-align: center;
+  border-radius: 30px;
 }
 
-button .login {
+.login > a {
+  margin-top: 20px;
   padding: 20px 40px;
   border-radius: 90px;
   background-color: #E6B980;
@@ -23,4 +32,14 @@ button .login {
   font-size: 18px;
   text-decoration: none;
   cursor: pointer;
+}
+
+#searchBar {
+  margin-top: 20px;
+  padding: 20px 40px;
+  border-radius: 90px;
+  background-color: #fff;
+  color: #282828;
+  font-size: 18px;
+
 }

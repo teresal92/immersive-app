@@ -2,7 +2,8 @@ const express = require("express");
 const path = require('path');
 const axios = require('axios');
 const cors = require('cors');
-const pool = require('../database')
+const pool = require('../database');
+const router = require('./routes.js');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -13,6 +14,8 @@ app.use(express.static(DIST_DIR));
 app.use(express.json());
 app.use(express.urlencoded( {extended: true }));
 app.use(cors());
+
+app.use('/spotify', router);
 
 // spotify oAuth auth code flow using spotify-web-api-node library
 // https://www.npmjs.com/package/spotify-web-api-node#installation
@@ -42,6 +45,8 @@ app.get('/login', (req, res) => {
   res.redirect(spotifyApi.createAuthorizeURL(scopes));
 });
 
+// needs to match redirect uri set in spotify for developers dashboard
+// app.get('/callback', (req, res) => {
 app.get('/callback', (req, res) => {
   const error = req.query.error;
   const code = req.query.code;
@@ -68,8 +73,9 @@ app.get('/callback', (req, res) => {
       console.log(
         `Sucessfully retreived access token. Expires in ${expires_in} s.`
       );
-      res.send('Success! You can now close the window.');
+      res.send(`Successfully retrieved accesss token`);
 
+      // refresh token continually before it expires
       setInterval(async () => {
         const data = await spotifyApi.refreshAccessToken();
         const access_token = data.body['access_token'];
@@ -78,23 +84,20 @@ app.get('/callback', (req, res) => {
         console.log('access_token:', access_token);
         spotifyApi.setAccessToken(access_token);
       }, expires_in / 2 * 1000);
+
     })
     .catch(error => {
       console.error('Error getting Tokens:', error);
       res.send(`Error getting Tokens: ${error}`);
-    })
-    .then(() => axios.post('/users', { code }))
-    .then((res) => console.log(`Success! ${res}`))
-    .catch(err => console.log(`Error posting authoriation token to users database! ${err.message}`));
+    });
 });
 
 // save auth code to users table
 app.post('/users', async (req, res) => {
-  const { code } = req.body;
-  const createdAt = Date.now();
+  const { username } = req.body;
   try {
-    const text = `INSERT INTO users(authorization_code, created_at) VALUES ($1, $2);`
-    const params = [code, createdAt];
+    const text = `INSERT INTO users(username) VALUES ($1);`
+    const params = [username];
     const result = await pool.query(text, params);
     res.status(200).send(result);
   } catch (err) {

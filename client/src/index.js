@@ -1,15 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './components/App.jsx';
-// import { useNavigate } from 'react-router';
-// import { useParams, BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { render } from "react-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-ReactDOM.render(
-  <App />
-  // <Router>
-  //   <Routes>
-  //     <Route path='/' element={<ProductState><App /></ProductState>}/>
-  //   </Routes>
-  // </Router>
-  ,
-  document.getElementById('app'));
+import App from './components/App.jsx';
+import Dashboard from './components/Dashboard.jsx'
+
+ReactDOM.render(<App /> , document.getElementById('app'));
+// ReactDOM.render(
+//   <BrowserRouter>
+//     <Routes>
+//       <Route path="/" element={<App />} />
+//       <Route path="dashboard" element={<Dashboard />} />
+//     </Routes>
+//   </BrowserRouter>
+//   , document.getElementById('app'));

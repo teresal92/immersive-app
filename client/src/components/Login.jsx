@@ -1,5 +1,4 @@
 import React from 'react';
-const axios = require('axios');
 
 export default function Login() {
   return (
@@ -9,7 +8,11 @@ export default function Login() {
         Select your focus playlist of choice and a background based on your mood.
         Then head over to focus mode to start your personalized pomodoro session
       </p>
-      <a href='http://localhost:3000/login'>
+      <a
+        href="http://localhost:3000/login"
+        target="popup"
+        onClick="window.open('http://localhost:3000/login','popup','width=600,height=600')"
+      >
         Login to Spotify
       </a>
     </div>

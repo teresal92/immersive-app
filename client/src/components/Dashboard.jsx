@@ -1,15 +1,10 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import Search from './Search.jsx';
+
+const axios = require('axios');
 
 function Dashboard() {
 
-  return (
-    <div>
-      <h1>Dashboard</h1>
-      {/*Search Bar*/}
-      {/* Playlist Carousel */}
-      {/* Music Player */}
-    </div>
-  )
 };
 
 export default Dashboard;
