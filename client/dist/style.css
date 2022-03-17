@@ -90,6 +90,20 @@ html {
   width: 100%;
 }
 
+.pomodoro {
+  font-size: 10em;
+}
 
+.timer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.message {
+  font-size: 0.5em;
+  min-height: 1.3em;
+  margin-bottom: 0.5em;
+}
 
 

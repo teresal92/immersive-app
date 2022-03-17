@@ -1,9 +1,13 @@
 import React, {useState, useEffect} from 'react';
 import Search from './Search.jsx';
 import PlaylistList from './PlaylistList.jsx';
-import Player from './Player.jsx'
-import Button from '@mui/material/Button';
+import Player from './Player.jsx';
+import Pomodoro from './Pomodoro.jsx';
+
+/* MUI */
+// import Button from '@mui/material/Button';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import { Button } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 
 const axios = require('axios');
@@ -92,6 +96,7 @@ export default function Dashboard({
             playlists={playlists}
             handleSelectPlaylist={handleSelectPlaylist}
           />
+          <Pomodoro />
         </div>
       </div>
 
