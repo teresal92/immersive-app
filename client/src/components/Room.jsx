@@ -5,24 +5,24 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+// import FALLBACK_IMAGE from 'src/assets/images/fallback_image.png';
 
-
-export default function Room({mood}) {
+export default function Room({mood, handleSelectRoom}) {
   return (
     <Card sx={{ maxWidth: 400, maxHeight: 500 }}>
       <CardMedia
         component="img"
         height="140"
-        image="/static/images/cards/contemplative-reptile.jpg"
-        alt="green iguana"
+        image={`${mood.img_url}`}
+        alt={`${mood.name}`}
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          {mood}
+          {mood.name}
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Enter Room</Button>
+        <Button size="small" onClick={() => handleSelectRoom(mood)}>Enter Room</Button>
         <Button size="small">Favorite</Button>
       </CardActions>
     </Card>

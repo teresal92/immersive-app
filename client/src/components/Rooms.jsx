@@ -16,14 +16,17 @@ const useStyles = makeStyles({
   }
 })
 
-export default function Rooms({moods}) {
+export default function Rooms({moods, handleSelectRoom}) {
   const classes = useStyles();
   return (
     <div>
-      <Grid container owSpacing={2} columnSpacing={2} className={classes.gridContainer}>
+      <Grid container rowSpacing={2} columnSpacing={2} className={classes.gridContainer}>
         {moods.map((mood, i) =>
           (<Grid key={i} item xs={12} sm={6} md={3}>
-            <Room mood={mood} />
+            <Room
+              mood={mood}
+              handleSelectRoom={handleSelectRoom}
+            />
           </Grid>)
         )}
       </Grid>
