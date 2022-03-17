@@ -1,15 +1,49 @@
-* {
-  margin: 0;
-  padding: 0;
+html {
   box-sizing: border-box;
-  background-color: #0A1929;
-  color: #FFF;
   font-family: 'Roboto', 'sans';
 }
 
-.app-container {
-  height: 100vh;
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
+
+.app {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+#app-logo {
+  height: 32px;
+  width: 32px;
+  background-color: #E6B980;
+  border-radius: 50%;
+  margin: 0 10px;
+}
+
+#app-header {
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#searchBar {
+  margin-top: 20px;
+  padding: 20px 40px;
+  border-radius: 90px;
+  background-color: #fff;
+  color: #282828;
+  font-size: 18px;
+}
+
+/* Log In */
 
 .login {
   height: 80vh;
@@ -20,7 +54,6 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  border-radius: 30px;
 }
 
 .login > a {
@@ -34,12 +67,10 @@
   cursor: pointer;
 }
 
-#searchBar {
-  margin-top: 20px;
-  padding: 20px 40px;
-  border-radius: 90px;
-  background-color: #fff;
-  color: #282828;
-  font-size: 18px;
+/* App */
 
-}
+
+
+
+
+

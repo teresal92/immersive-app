@@ -6,10 +6,22 @@ const spotifyApi = require('./spotify/index.js')
 router.route('/playlists/:query')
   .get((req, res) => {
     let query = req.params.query;
-    console.log('query: ', req.params);
     spotifyApi.searchPlaylists(query)
     .then(data => res.json(data.body))
     .catch(err => res.status(400).send(err));
+  })
+
+router.route('/playlists/:id')
+  .get((req, res) => {
+    let { id } = req.params;
+    console.log('id', req. params);
+    spotifyApi.getPlaylistsTracks(id, {
+        offset: 1,
+        limit: 5,
+        fields: 'items'
+      })
+    .then(data => res.send(data.body))
+    .catch(err => res.status(400).send(`Something went wrong! ${err}`));
   })
 
 router.route('/user')

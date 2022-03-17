@@ -29,10 +29,6 @@ export default function Search({ handleSearch }) {
         onClick={handleClick}
         value={value}
       />
-      <input
-        type="submit"
-        value="Search"
-      />
     </form>
   )
 };

@@ -10,6 +10,8 @@ const PORT = process.env.PORT || 3000;
 const DIST_DIR = path.join(__dirname, '../client/dist');
 const spotifyApi = require('./spotify');
 
+let accessToken;
+
 app.use(express.static(DIST_DIR));
 app.use(express.json());
 app.use(express.urlencoded( {extended: true }));
@@ -73,8 +75,7 @@ app.get('/callback', (req, res) => {
       console.log(
         `Sucessfully retreived access token. Expires in ${expires_in} s.`
       );
-      res.send(`Successfully retrieved accesss token`);
-
+      res.redirect(`/`);
       // refresh token continually before it expires
       setInterval(async () => {
         const data = await spotifyApi.refreshAccessToken();
@@ -84,7 +85,6 @@ app.get('/callback', (req, res) => {
         console.log('access_token:', access_token);
         spotifyApi.setAccessToken(access_token);
       }, expires_in / 2 * 1000);
-
     })
     .catch(error => {
       console.error('Error getting Tokens:', error);
@@ -105,7 +105,13 @@ app.post('/users', async (req, res) => {
   }
 });
 
+app.get('/token', (req, res) => {
+  res.send(spotifyApi._credentials.accessToken);
+})
+
 // Set Port
 app.listen(PORT, () => {
   console.log(`Server listening on ${PORT}`);
 });
+
+module.exports = accessToken;

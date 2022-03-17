@@ -5,8 +5,7 @@ export default function Login() {
     <div className="login">
       <h1 style={{ fontSize: '120px'}}>Welcome</h1>
       <p>To start a focus session, log into spotify.
-        Select your focus playlist of choice and a background based on your mood.
-        Then head over to focus mode to start your personalized pomodoro session
+        Select a focus room to open up a curated room based on your mood.
       </p>
       <a
         href="http://localhost:3000/login"
@@ -14,6 +13,14 @@ export default function Login() {
         onClick="window.open('http://localhost:3000/login','popup','width=600,height=600')"
       >
         Login to Spotify
+      </a>
+      <p style={{ marginTop: '20px'}}>
+        After logging in, click the button below to enter the app.
+      </p>
+      <a
+        href="http://localhost:3000/"
+      >
+        Enter Immersive
       </a>
     </div>
   )
