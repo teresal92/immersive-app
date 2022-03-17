@@ -40,8 +40,9 @@ function App() {
     axios.get('/spotify/user')
     .then(user => {
       setUser(user.data);
-      setIsLoggedIn(true);
+
     })
+    .then(() => setIsLoggedIn(true))
     .catch(err => console.error(`error: ${err}`))
   }, []);
 

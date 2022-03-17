@@ -75,7 +75,7 @@ app.get('/callback', (req, res) => {
       console.log(
         `Sucessfully retreived access token. Expires in ${expires_in} s.`
       );
-      res.redirect(`/`);
+      res.send(`Sucessfully retreived access token. You may close the window.`);
       // refresh token continually before it expires
       setInterval(async () => {
         const data = await spotifyApi.refreshAccessToken();

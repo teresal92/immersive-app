@@ -10,7 +10,7 @@ export default function Login() {
       <a
         href="http://localhost:3000/login"
         target="popup"
-        onClick="window.open('http://localhost:3000/login','popup','width=600,height=600')"
+        onClick="window.open('http://localhost:3000/login', '_blank','width=600,height=600')"
       >
         Login to Spotify
       </a>

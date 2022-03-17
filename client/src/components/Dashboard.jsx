@@ -70,12 +70,6 @@ export default function Dashboard({
     .catch(err => console.error(`error fetching playlist tracks: ${err}`));
   };
 
-  const clearSearch = () => {
-    if (trackUri) {
-
-    }
-  }
-
   return (
     <>
       <div className="dashboard" style={{ backgroundImage: `url(${room.img_url})`}}>

@@ -81,7 +81,7 @@ html {
 }
 
 .dashboard {
-  margin: 0 30px;
+  margin: 0 auto;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
