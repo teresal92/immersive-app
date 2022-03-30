@@ -62,7 +62,7 @@ npm start
 * Customizable pomodoro timer
 
 ## Contact
-[Teresa Lew](https://github.com/teresal92)
-Digital Paintings for Deep Focus, Chill, Melancholy and Wanderlust by [Tristen Urban](https://github.com/TristenUrban)
+* [Teresa Lew](https://github.com/teresal92)
+* Digital Paintings for Deep Focus, Chill, Melancholy and Wanderlust by [Tristen Urban](https://github.com/TristenUrban)
 
 ## How to Contribute
