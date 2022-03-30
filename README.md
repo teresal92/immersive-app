@@ -40,14 +40,13 @@ npm build-db
 ### 2. Setting Up Spotify Credentials
 
 * Make an account on [Spotify Developers](https://developer.spotify.com/documentation/general/guides/authorization/app-settings/).
-* Rename configExample.js to config.js to prevent client information from being commited. Fill in the empty strings with CLIENT_ID and CLIENT_SECRET credentials from your Spotify Dashboard page (after initial step).
+* Rename `server/spotify/configExample.js` to `server/spotify/config.js` to prevent client information from being commited. Fill in the empty strings with CLIENT_ID and CLIENT_SECRET credentials from your Spotify Dashboard page (after initial step).
 
 ```
  module.exports = {
   CLIENT_ID: '',
   CLIENT_SECRET: '',
 }
-
 ```
 
 ### 3. Running the Project
@@ -57,7 +56,6 @@ Run below scripts to compile using webpack and run development server.
 ```
 npm run react-dev
 npm start
-
 ```
 
 ## Roadmap
