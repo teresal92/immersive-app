@@ -32,5 +32,5 @@ export default function Rooms({moods, handleSelectRoom}) {
       </Grid>
       <Button>Add more Rooms</Button>
     </div>
-  )
+  );
 };

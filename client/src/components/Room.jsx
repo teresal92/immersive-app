@@ -5,7 +5,6 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-// import FALLBACK_IMAGE from 'src/assets/images/fallback_image.png';
 
 export default function Room({mood, handleSelectRoom}) {
   return (
@@ -27,4 +26,4 @@ export default function Room({mood, handleSelectRoom}) {
       </CardActions>
     </Card>
   );
-}
+};

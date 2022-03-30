@@ -5,7 +5,6 @@ import Player from './Player.jsx';
 import Pomodoro from './Pomodoro.jsx';
 
 /* MUI */
-// import Button from '@mui/material/Button';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { Button } from '@mui/material';
 import { makeStyles } from '@mui/styles';
@@ -32,7 +31,7 @@ export default function Dashboard({
   handleSearch,
   handleSelectRoom,
   playlists
-}){
+}) {
   const classes = useStyles();
   const [accessToken, setAccessToken] = useState(null);
   const [selectedPlaylist, setSelectedPlaylist] = useState(null);
@@ -52,9 +51,7 @@ export default function Dashboard({
   }
 
   const handleSelectPlaylist = (e, id) => {
-    // set playlist with playlist id
     setSelectedPlaylist(id);
-    // send an axios request to get playlist tracks
     console.log('sending id!', id)
     axios.get(`https://api.spotify.com/v1/playlists/${id}/tracks`, {
       headers: {
@@ -93,8 +90,7 @@ export default function Dashboard({
           <Pomodoro />
         </div>
       </div>
-
       <Player trackUri={trackUri} />
     </>
-  )
+  );
 };

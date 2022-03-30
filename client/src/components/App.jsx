@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useMemo } from 'react';
-
 import Login from './Login.jsx';
 import Search from './Search.jsx';
 import PlaylistList from './PlaylistList.jsx';
@@ -8,7 +7,7 @@ import roomsData from '../roomsData.js';
 import Player from './Player.jsx';
 import Dashboard from './Dashboard.jsx';
 
-// Material UI
+// MUI
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -17,7 +16,7 @@ import Avatar from '@mui/material/Avatar';
 
 const axios = require('axios');
 
-function App() {
+export default function App() {
   const [user, setUser] = useState(null);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [moods, setMoods] = useState(roomsData);
@@ -55,7 +54,6 @@ function App() {
     }
   }, [user]);
 
-  // pass in room id
   const handleSelectRoom = (room) => {
     setRoomSelected(!roomSelected);
     if (room) {
@@ -64,7 +62,6 @@ function App() {
   }
 
   const handleSearch = (query) => {
-    console.log('submit query! ', query);
     axios.get(`/spotify/playlists/${query}`)
     .then(res => setPlaylists(res.data.playlists.items))
     .catch(err => console.log(err));
@@ -75,10 +72,14 @@ function App() {
       <CssBaseline />
         <div className="app">
           <header id="app-header">
-              <div id="app-logo"></div>
-              <h1>immersive</h1>
-              <span style={{display: 'flex', alignItems: 'center'}}>
-                <h3 style={{ marginRight: '10px' }}>Hi, {user.display_name}</h3>
+              <span style={{ display: 'flex', justifyContent: 'flex-start', alignItems: 'center' }}>
+                <div id="app-logo"></div>
+                <h1>immersive</h1>
+              </span>
+              <span style={{ display: 'flex', alignItems: 'center' }}>
+                <h3 style={{ marginRight: '10px' }}>
+                  Hi, {user.display_name}
+                </h3>
                 <Avatar sx={{ width: 32, height: 32 }}>
                   {user.display_name.slice(0,1).toUpperCase()}
                 </Avatar>
@@ -98,7 +99,6 @@ function App() {
                 moods={moods}
                 handleSelectRoom={handleSelectRoom}
               />
-              <h2>Favorite Rooms</h2>
               <Player />
             </div>
           ) }
@@ -115,6 +115,5 @@ function App() {
         <Login />
       </div>
     </ThemeProvider>
-  )
-}
-export default App;
+  );
+};

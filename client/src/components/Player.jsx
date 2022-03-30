@@ -18,7 +18,6 @@ export default function Player({ trackUri }) {
     return null;
   }
 
-
   return (
     <div className="music-player">
       <SpotifyPlayer
@@ -26,5 +25,5 @@ export default function Player({ trackUri }) {
         uris={trackUri ? trackUri : [`spotify:track:10oKSzRcwbZsog2uq2gb4b`]}
       />
     </div>
-  )
+  );
 };

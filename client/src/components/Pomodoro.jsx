@@ -39,5 +39,5 @@ export default function Pomodoro() {
         {timerMinutes}:{timerSeconds}
       </div>
     </div>
-  )
-}
+  );
+};

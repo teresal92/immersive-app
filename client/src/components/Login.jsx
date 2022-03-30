@@ -23,5 +23,5 @@ export default function Login() {
         Enter Immersive
       </a>
     </div>
-  )
+  );
 };

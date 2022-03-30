@@ -14,7 +14,6 @@ export default function Search({ handleSearch }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // make a get request passing in query string as a parameter
     handleSearch(value);
     setValue('Search playlists...');
   }
@@ -30,6 +29,6 @@ export default function Search({ handleSearch }) {
         value={value}
       />
     </form>
-  )
+  );
 };
 
