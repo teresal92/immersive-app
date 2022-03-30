@@ -1,18 +1,27 @@
 # Immersive
-Maximize focus and productivity with Immersive, a web-based pomodoro app with Spotify integration.
+> Maximize focus and productivity with Immersive, a web-based pomodoro app with Spotify integration.
 
-## Table of Contents
-- [About the Project](#about-the-project)
-- [Getting Started](#getting-started)
-  - [1. Installing Dependencies](#1-installing-dependencies)
-  - [2. Setting Up Spotify Credentials](#2-setting-up-spotify-credentials)
-  - [3. Running the Project](#3-running-the-project)
-- [Roadmap](#roadmap)
-- [Contact](#contact)
-- [How to Contribute](#how-to-contribute)
+<details>
+  <summary>Table of Contents</summary>
+  
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">1. Installing Dependencies</a></li>
+        <li><a href="#2-setting-up-spotify-credentials">2. Setting Up Spotify Credentials</a></li>
+        <li><a href="#3-running-the-project">3. Running the Project</a></li>
+      </ul>
+    </li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#license">License</a></li>
+</details>
 
 ## About the Project
-> Maximize focus and productivity with Immersive, a web-based pomodoro app with music integration.
   > Utilizing pomodoro principles for time management, Immersive's focus rooms help you breakdown your work into intervals of 25 minute sessions and 5 minute breaks.
   > It's easy to get started. To start a focus session:
   > * Login or sign up for a Spotify account.
@@ -62,7 +71,12 @@ npm start
 * Customizable pomodoro timer
 
 ## Contact
+To contribute or ask any questions reach out to:
 * [Teresa Lew](https://github.com/teresal92)
-* Digital Paintings for Deep Focus, Chill, Melancholy and Wanderlust by [Tristen Urban](https://github.com/TristenUrban)
 
-## How to Contribute
+Digital Paintings for Deep Focus, Chill, Melancholy and Wanderlust by:
+* [Tristen Urban](https://github.com/TristenUrban)
+
+## License
+Distributed under the MIT License. See `LICENSE.txt` for more information.
+
