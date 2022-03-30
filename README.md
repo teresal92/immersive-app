@@ -34,7 +34,6 @@ Install dependencies and load PostgreSQL database schema.
 ```
 npm install
 npm build-db
-
 ```
 
 ### 2. Setting Up Spotify Credentials
