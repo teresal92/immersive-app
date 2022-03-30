@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import PlaylistListEntry from './PlaylistListEntry.jsx';
 
+// MUI
 import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
@@ -16,7 +17,7 @@ const useStyles = makeStyles({
   }
 })
 
-function PlaylistList({playlists, handleSelectPlaylist}) {
+export default function PlaylistList({playlists, handleSelectPlaylist}) {
   const classes = useStyles();
   return (
     <div>
@@ -35,18 +36,5 @@ function PlaylistList({playlists, handleSelectPlaylist}) {
           )}
       </Grid>
     </div>
-  )
+  );
 };
-
-// function PlaylistList({playlists}) {
-//   return (
-//     <div className="playlist">
-//       {playlists.length > 0 && <h4>Playlist Results</h4> }
-//       <ul>
-//         {playlists.map((playlist, i) => <PlaylistListEntry key={i} playlist={playlist} />)}
-//       </ul>
-//     </div>
-//   )
-// };
-
-export default PlaylistList;
