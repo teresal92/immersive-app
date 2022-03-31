@@ -30,6 +30,8 @@
 
 ![image](/screenshots/immersive_demo.gif)
 
+![image](/screenshots/immersive_login_demo.gif)
+
 ## Getting Started
 
 ### 1. Installing Dependencies
