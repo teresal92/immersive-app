@@ -3,7 +3,6 @@
 
 <details>
   <summary>Table of Contents</summary>
-  
   <ol>
     <li>
       <a href="#about-the-project">About The Project</a>
@@ -22,7 +21,8 @@
 </details>
 
 ## About the Project
-  > Utilizing pomodoro principles for time management, Immersive's focus rooms help you breakdown your work into intervals of 25 minute sessions and 5 minute breaks.
+  > Hi there! I built Immersive as a challenge to learn Spotify OAuth2 and build an MVP product in less than 48 hours. While most pomo
+  > Based on pomodoro principles for time management, Immersive's curated focus rooms help you break down your workflow into intervals of 25 minute sessions and 5 minute breaks. While many pomodoro apps exist, many do not have music integration which was a feature that I personally found important for my productivity flow. What sets Immersive apart is the Spotify integration solving the problem of having multiple apps open.
   > It's easy to get started. To start a focus session:
   > * Login or sign up for a Spotify account.
   > * Enter a featured curated room based on your mood or create a new room.
