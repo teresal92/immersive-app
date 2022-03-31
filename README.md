@@ -26,7 +26,7 @@
   > It's easy to get started. To start a focus session:
   > * Login or sign up for a Spotify account.
   > * Enter a featured curated room based on your mood or create a new room.
-  > * Each room has its own curated background image, pomodoro-based timer and music player as well as search functionality to find and play new playlists.
+  > * Each room has its own curated background image, pomodoro-based timer and music player as well as search functionality to discover and play new playlists.
 
 ![image](/screenshots/immersive_demo.gif)
 
