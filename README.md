@@ -28,6 +28,8 @@
   > * Enter a featured curated room based on your mood or create a new room.
   > * Each room has its own curated background image, pomodoro-based timer and music player as well as search functionality to find and play new playlists.
 
+![image](/screenshots/immersive_demo.gif)
+
 ## Getting Started
 
 ### 1. Installing Dependencies
