@@ -8,7 +8,8 @@
     "react-dev": "webpack --config ./webpack.config.js  -w",
     "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build-db": "psql postgres < database/schema.sql"
+    "build-db": "psql postgres < database/schema.sql",
+    "lint": "eslint src/**/*.js src/**/*.jsx"
   },
   "repository": {
     "type": "git",
@@ -47,6 +48,7 @@
     "@babel/preset-react": "^7.16.7",
     "babel-loader": "^8.2.3",
     "eslint": "^8.11.0",
+    "eslint-config-airbnb-babel": "^0.2.1",
     "eslint-plugin-react": "^7.29.4",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",

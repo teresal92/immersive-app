@@ -4,7 +4,12 @@ module.exports = {
         "es2021": true,
         "node": true
     },
-    "extends": "plugin:react/recommended",
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "airbnb",
+        "airbnb-babel"
+    ],
     "parserOptions": {
         "ecmaFeatures": {
             "jsx": true
